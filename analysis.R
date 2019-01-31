@@ -4,6 +4,9 @@ a <- c(100, 400, 800, 1200, 1600, 2000, 2400, 2800, 3200, 3600, 4000)
 b <- c(48, 105, 187, 256, 330, 409, 480, 556, 636, 705, 784)
 print(lm(b ~ a), digits=3)
 
+plot(a, b, pch = 16, cex = 1.3, col = "blue", main = "gostraight", xlab = "a (units)", ylab = "b (units)")
+abline(lm(b ~ a))
+
 
 # swing right: y=10.725x+10.139
 
