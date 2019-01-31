@@ -1,0 +1,90 @@
+
+R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # gostraight: y=.188x+31.086
+> 
+> a <- c(100, 400, 800, 1200, 1600, 2000, 2400, 2800, 3200, 3600, 4000)
+> b <- c(48, 105, 187, 256, 330, 409, 480, 556, 636, 705, 784)
+> print(lm(b ~ a), digits=3)
+
+Call:
+lm(formula = b ~ a)
+
+Coefficients:
+(Intercept)            a  
+     31.086        0.188  
+
+> 
+> 
+> # swing right: y=10.725x+10.139
+> 
+> a <- c(.5, 1, 3, 5, 7, 9, 11, 13, 15)
+> b <- c(15, 20, 45, 64, 83, 107, 129, 148, 172)
+> print(lm(b ~ a), digits=3)
+
+Call:
+lm(formula = b ~ a)
+
+Coefficients:
+(Intercept)            a  
+       10.1         10.7  
+
+> 
+> # swing left: y=10.768x-7.1602
+> a <- c(-0.5, -1, -3, -5, -7, -9, -11, -13, -15)
+> b <- c(-12, -19, -39, -61, -84, -102, -125, -148, -169)
+> print(lm(b ~ a), digits=3)
+
+Call:
+lm(formula = b ~ a)
+
+Coefficients:
+(Intercept)            a  
+      -7.16        10.77  
+
+> 
+> # rotate right: y=10.993x+18.899
+> 
+> a <- c(0.5, 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8  , 9  , 10 , 11 , 12 , 13 , 14 , 15)
+> b <- c(18 , 29, 42, 56, 70, 70, 87, 96, 105, 117, 127, 136, 160, 160, 172, 182)
+> print(lm(b ~ a), digits=3)
+
+Call:
+lm(formula = b ~ a)
+
+Coefficients:
+(Intercept)            a  
+       18.9         11.0  
+
+> 
+> # rotate left: y=-10.567x-19.481
+> 
+> a <- c(-0.5, -1 , -2 , -3 , -4 , -5 , -6 , -7 , -8  , -9  , -10 , -11 , -12 , -13 , -14 ,  -15)
+> b <- c(-24 , -30, -41, -51, -62, -74, -82, -97, -103, -112, -124, -135, -147, -156, -167, -180)
+> print(lm(b ~ a), digits=3)
+
+Call:
+lm(formula = b ~ a)
+
+Coefficients:
+(Intercept)            a  
+      -19.5         10.6  
+
+> 
+> 
